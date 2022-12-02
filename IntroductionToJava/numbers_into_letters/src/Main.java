@@ -6,12 +6,10 @@ public class Main {
         System.out.println("Enter numbers from 1 to 999:\n");
         int number = scanner.nextInt();
         if ((0 < number) && (number < 1000)) {
-            System.out.println("Hundreds:\n");
-            int hundreds = scanner.nextInt();
-            System.out.println("Dozens:\n");
-            int dozens = scanner.nextInt();
-            System.out.println("Units:\n");
-            int units = scanner.nextInt();
+            int hundreds = Math.round(number/100);
+            int remainder1 = number%100;
+            int dozens = Math.round(remainder1/10);
+            int units = remainder1%10;
             String read = " ";
             String readHunders = " ";
             String readDozens = " ";
