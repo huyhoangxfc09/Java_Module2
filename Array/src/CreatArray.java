@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class DemoArray {
+public class CreatArray {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập kích thước của mảng: ");
