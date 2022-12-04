@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Array/Array.iml" filepath="$PROJECT_DIR$/Array/Array.iml" />
       <module fileurl="file://$PROJECT_DIR$/Demo_If_Switchcase/Demo_If_Switchcase.iml" filepath="$PROJECT_DIR$/Demo_If_Switchcase/Demo_If_Switchcase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Funtion/Funtion.iml" filepath="$PROJECT_DIR$/Funtion/Funtion.iml" />
       <module fileurl="file://$PROJECT_DIR$/IntroductionToJava/IntroductionToJava.iml" filepath="$PROJECT_DIR$/IntroductionToJava/IntroductionToJava.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Java_Module2.iml" filepath="$PROJECT_DIR$/.idea/Java_Module2.iml" />
       <module fileurl="file://$PROJECT_DIR$/LoopJava/LoopJava.iml" filepath="$PROJECT_DIR$/LoopJava/LoopJava.iml" />
