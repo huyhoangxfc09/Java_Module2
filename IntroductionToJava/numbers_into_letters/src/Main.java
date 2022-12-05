@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter numbers from 1 to 999:\n");
+        System.out.println("Enter numbers from 1 to 999:");
         int number = scanner.nextInt();
         if ((0 < number) && (number < 1000)) {
             int hundreds = Math.round(number/100);
