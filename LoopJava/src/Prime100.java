@@ -3,22 +3,25 @@ import java.util.Scanner;
 public class Prime100 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Các số nguyên tố từ 1 đến 100 là:");
+        System.out.println("Enter test value");
+        int value = scanner.nextInt();
         int count = 0;
-        for (int i = 2; i < 100; i++) {
-            int j = 2;
-            boolean check = true;
-            while (j <= Math.sqrt(i)) {
-                if (i % j == 0) {
-                    check = false;
-                    break;
-                }
-                j++;
-            }
-            if (check){
-                count+=1;
-                System.out.println("Số thứ "+count+" = "+i);
+        for (int i = 0; i <=value; i++) {
+            if (checkPrime(i)){
+                count++;
+                System.out.println("Element "+count+ " => "+i);
             }
         }
+    }
+    public static boolean checkPrime(int number){
+        if (number<2){
+            return false;
+        }else {
+            for (int i = 2; i < number; i++) {
+                if (number % i == 0) {
+                    return false;
+                }
+            }
+        }return true;
     }
 }
