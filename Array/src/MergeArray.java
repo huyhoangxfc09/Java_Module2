@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class MergeArray {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int[] Array = new int[12];
         int[] arr1 = new int[5];
+        int[] arr2 = new int[7];
         System.out.println("Nhập các phần tử mảng 1:");
         for (int i = 0; i < arr1.length; i++) {
             System.out.println("Nhập phần tử thứ "+(i+1));
@@ -15,7 +15,6 @@ public class MergeArray {
             System.out.print(element + " ");
         }
         System.out.println("\n");
-        int[] arr2 = new int[7];
         System.out.println("Nhập các phần tử mảng 2:");
         for (int i = 0; i < arr2.length; i++) {
             System.out.println("Nhập phần tử thứ " + (i + 1));
@@ -26,6 +25,7 @@ public class MergeArray {
             System.out.print(element + " ");
         }
         System.out.println("\n");
+        int[] Array = new int[12];
         for (int i = 0; i <arr1.length; i++) {
             Array[i]=arr1[i];
         }
