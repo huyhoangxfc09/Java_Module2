@@ -6,41 +6,40 @@ public class Main {
         System.out.println("Enter numbers from 1 to 999:");
         int number = scanner.nextInt();
         if ((0 < number) && (number < 1000)) {
-            int hundreds = Math.round(number/100);
-            int remainder1 = number%100;
-            int dozens = Math.round(remainder1/10);
-            int units = remainder1%10;
-            String read = " ";
-            String readHunders = " ";
-            String readDozens = " ";
-            String readUnist = " ";
+            int hundreds = number/100;
+            int dozens = (number%100)/10;
+            int units = number%10;
+            String read ;
+            String readHunderds = "";
+            String readDozens = "";
+            String readUnist = "";
             switch (hundreds) {
                 case 1:
-                    readHunders = "one hundred";
+                    readHunderds = "one hundred";
                     break;
                 case 2:
-                    readHunders = "two hundred";
+                    readHunderds = "two hundred";
                     break;
                 case 3:
-                    readHunders = "three hundred";
+                    readHunderds = "three hundred";
                     break;
                 case 4:
-                    readHunders = "for hundred";
+                    readHunderds = "for hundred";
                     break;
                 case 5:
-                    readHunders = "five hundred";
+                    readHunderds = "five hundred";
                     break;
                 case 6:
-                    readHunders = "six hundred";
+                    readHunderds = "six hundred";
                     break;
                 case 7:
-                    readHunders = "seven hundred";
+                    readHunderds = "seven hundred";
                     break;
                 case 8:
-                    readHunders = "eight hundred";
+                    readHunderds = "eight hundred";
                     break;
                 case 9:
-                    readHunders = "nine hundred";
+                    readHunderds = "nine hundred";
                     break;
             }
             switch (dozens) {
@@ -51,7 +50,7 @@ public class Main {
                     readDozens = "thirty";
                     break;
                 case 4:
-                    readDozens = "fourty";
+                    readDozens = "forty";
                     break;
                 case 5:
                     readDozens = "fifty";
@@ -98,45 +97,53 @@ public class Main {
                     readUnist = "nine";
                     break;
             }
-            if ((0 < number) && (number < 10)) {
+            if ((number < 10)) {
                 read = readUnist;
                 System.out.printf(number + " = " + read);
-            }
-            if ((10 <= number) && (number < 20)) {
+            }else if (number < 20) {
                 switch (number) {
                     case 10:
                         read = "ten";
                         System.out.print(read);
+                        break;
                     case 11:
                         read = "elven";
                         System.out.print(read);
+                        break;
                     case 12:
                         read = "twelve";
                         System.out.print(read);
+                        break;
                     case 13:
                         read = "thirteen";
                         System.out.print(read);
+                        break;
                     case 14:
                         read = "fourteen";
                         System.out.print(read);
+                        break;
                     case 15:
                         read = "fifteen";
                         System.out.print(read);
+                        break;
                     case 16:
                         read = "sixteen";
                         System.out.print(read);
+                        break;
                     case 17:
                         read = "seventeen";
                         System.out.print(read);
+                        break;
                     case 18:
                         read = "eighteen";
                         System.out.print(read);
+                        break;
                     case 19:
                         read = "nineteen";
                         System.out.print(read);
+                        break;
                 }
-            }
-            if ((20 <= number) && (number < 100)) {
+            }else if (number < 100) {
                 if (units == 0) {
                     read = readDozens;
                     System.out.printf(number + " = " + read);
@@ -144,19 +151,18 @@ public class Main {
                     read = readDozens + " " + readUnist;
                     System.out.printf(number + " = " + read);
                 }
-            }
-            if ((100 <= number) && (number < 1000)) {
+            }else {
                 if ((dozens == 0) && (units == 0)) {
-                    read = readHunders;
+                    read = readHunderds;
                     System.out.printf(number + " = " + read);
                 } else if (dozens == 0) {
-                    read = readHunders + " and " + readUnist;
+                    read = readHunderds + " and " + readUnist;
                     System.out.printf(number + " = " + read);
-                } else if ((dozens != 0) && (units == 0)) {
-                    read = readHunders + " and " + readDozens;
+                } else if (units == 0) {
+                    read = readHunderds + " and " + readDozens;
                     System.out.printf(number + " = " + read);
-                } else if ((dozens != 0) && (units != 0)) {
-                    read = readHunders + " and " + readDozens + "-" + readUnist;
+                } else{
+                    read = readHunderds + " and " + readDozens + "-" + readUnist;
                     System.out.printf(number + " = " + read);
                 }
             }
