@@ -9,7 +9,7 @@ public class Display20NumberPrime {
                 count++;
                 System.out.println("Element "+count+" => "+number);
             }
-            number++;
+                number++;
         }
     }
     public static boolean checkPrime(int number){
